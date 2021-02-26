@@ -28,6 +28,7 @@ public class Login_form extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("TAG","ASdasdVF");
         setContentView(R.layout.activity_login_form);
 
          Login=findViewById(R.id.Login_form_login_btn);

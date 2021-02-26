@@ -2,6 +2,7 @@ package com.example.couponzy;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
 public class MyApplication extends Application {
     public static Context context;

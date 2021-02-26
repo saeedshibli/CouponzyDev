@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.couponzy.Model.FireBaseAuth;
 import com.example.couponzy.Model.FireDataBase;
+import com.example.couponzy.Model.FirebaseReference;
 import com.example.couponzy.login_Register.Login_form;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -40,9 +41,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //FireBaseAuth.instance.signOut();
         setContentView(R.layout.activity_main);
+        Log.d("TAG","bla");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         /*FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
         FireDataBase.instance.getReference("User").child(FireBaseAuth.instance.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                /*String Firstname=snapshot.child("firstname").getValue().toString();
+                String Firstname=snapshot.child("firstname").getValue().toString();
                 String Lastname=snapshot.child("lastname").getValue().toString();
-                name.setText("Welcome "+ Firstname+" "+Lastname);*/
+                name.setText("Welcome "+ Firstname+" "+Lastname);
             }
 
             @Override
