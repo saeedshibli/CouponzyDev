@@ -76,8 +76,8 @@ public class Coupon {
         FireDataBase.instance.getReference("User").child(FireBaseAuth.instance.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                /*String img=snapshot.child("imgURL").getValue().toString();
-                profileImg=img;*/
+                String img=snapshot.child("imgURL").getValue().toString();
+                profileImg=img;
             }
 
             @Override
